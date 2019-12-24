@@ -1,0 +1,47 @@
+<div class="col-md-12">
+    {{#each alert}}
+    <div class="alert alert-danger">
+        {{this}}
+    </div>
+    {{/each}}
+
+
+
+    {{#each user}}
+
+    <input type="hidden" class="form-control" id="user_nick" name="user_nick" value="{{this.nick}}">
+
+    {{/each}}
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header">Write to NewsBoard</div>
+            <div class="card-body">
+
+                <form method="post" action="/ncreate">
+
+                    <div class="form-group">
+                        <label for="user_email">Title</label>
+                        <div class="form-label-group">
+                            <input class="form-control" type="title" placeholder="title" id="nboard_title" name="nboard_title" />
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_email">Password</label>
+                        <div class="form-label-group">
+                            <input class="form-control" type="password" placeholder="Password" id="nboard_password" name="nboard_password" />
+                        </div>
+                        <small id="emailHelp" class="form-text text-muted">It will be used to edit this post.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-date-input">Post</label>
+                        <div class="form-label-group">
+                            <textarea class="form-control" rows="18" id="nboard_post" required="required" type="post" autofocus="autofocus" placeholder="post" name="nboard_post"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="btn-market-search" class="btn btn-danger btn-lg btn-block">작성</button>
+                    </div>
+                </form>
+            </div>

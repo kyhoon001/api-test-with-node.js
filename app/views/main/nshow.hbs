@@ -1,0 +1,69 @@
+<div class="col-md-12">
+
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-body">
+
+                <div class="form-group">
+                    <label for="user_email">Title</label>
+                    <div class="form-label-group">
+
+                        <div class="card-header border border-dark">{{nboard.title}}</div>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="example-date-input">Post</label>
+                    <div class="form-label-group">
+                        <div class="jumbotron border border-dark">
+                            {{nboard.post}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <a class="btn btn-primary btn-md" href="/nboard">이전으로</a>
+
+                </div>
+
+                <div class="container">
+                    <h2>댓글</h2>
+                    <hr>
+
+
+                    {{#each comments}}
+                    <p>{{this.nick}} <br> {{this.comment}}</p>
+                    <p class="text-right">{{this.createdAt}}</p>
+                    <hr>
+
+
+                    {{/each}}
+                </div>
+                <form method="post" action="/nccreate">
+
+                    <input type="hidden" class="form-control" id="comment_nick" name="comment_nick" value="{{nick.nick}}">
+                    <input type="hidden" class="form-control" id="comment_post" name="comment_post" value="{{nboard._id}}">
+
+                    <div class="form-group">
+                        <label for="comment">comment</label>
+                        <div class="form-label-group">
+                            <input class="form-control" type="comment" placeholder="comment" id="comment_comment" name="comment_comment" />
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <button type="submit" id="btn-market-search" class="btn btn-block">작성</button>
+
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
