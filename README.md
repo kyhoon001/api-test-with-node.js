@@ -2,6 +2,22 @@
 - 2018년 2학기 웹프로그래밍 수업 결과물입니다.
 - 학습 목표는 공공데이터 API의 사용과 Node.js를 이용해서 구현한 서버 위에서 동작하는 반응형 웹 프로그래밍을 제작하는 것이었습니다.
 
+```
+1.npm install -g nodemon 으로 nodemon 설치
+2. nodemon node_js.js 이런 식으로 실행
+3. npm init   => myapp
+4. npm i -g express-generator  => express
+  => i == install을 의미
+5. 이후 npm install 하면 알아서 필요한거 설치
+  => node_modules에 설치
+6. npm start  입력하면 실행 3000포트
+
+postman으로 get, post 관련 테스트
+
+
+
+
+
 
 - package.json
  ``` {
