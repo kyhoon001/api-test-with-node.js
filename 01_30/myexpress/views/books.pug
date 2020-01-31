@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= 'message'
+  h2='hohoha'
+  pre#asd #{data}
+
+
+    ul
+        each book, i in data
+            li= (i+1) + " : " + book.title + "    작가 : " + book.author
+            
+
+    script.
+      var data = document.getElementById("asd")
+     console.log(data);

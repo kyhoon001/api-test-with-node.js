@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  hr
+  p=data   
+  p #{data} 
+
+  div=data
+  hr
+  ul
+    each f, i in ['사과','배','오렌지','바나나']
+      li= (i+1) + '번째 과일 : ' +  f
+  hr
+  ul
+    each f, i in data
+      li= (i+1) + " : " + f
+  hr
+
+
+  #login-button login
+  .post-image image
+  span#highlight highlight
+  p.hitten.full button
+    | 안녕하세여
+    br
+    | 계속 이어나갈 수 있음
