@@ -8,8 +8,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var booksRouter = require('./routes/books');
 var todoRouter = require('./routes/todo');
+var todoRouter2 = require('./routes/todo2');
+
 //book api router
-var books = require('./routes/books')
+var books = require('./routes/books');
 
 var app = express();
 
@@ -27,7 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/todo', todoRouter);
 //books uri
-app.use('/api',booksRouter);
+app.use('/api',todoRouter2);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

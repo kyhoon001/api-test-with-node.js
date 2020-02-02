@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        #green {
+            height: 200px;
+            width: 100%;
+            background-color: green;
+        }
+
+        #green>h1 {
+            padding-top: 60px;
+            text-align: center;
+            color: white;
+        }
+
+        #todo {
+            text-align: center;
+            width: 200px;
+            height: 50px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            text-align: left;
+            padding: 8px;
+        }
+
+        .delete {
+            width: 5%;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='green'>
+        h1 할일 목록 정리
+        <input type="text" hidden="true" id="num">
+        <input type="text" id="todoinput" placeholder="Title.."
+            style=" width:80%; height:40px; margin-left : 80px; padding-right:0; margin-right:0">
+        <input type="button" onclick="register()" value="ADD"
+            style="height:50px; width:100px; padding:0; margin:0; color:whitegrey"><br>
+    </div>
+    <div>
+        <table id='d'>
+            <tbody id='todolist'></tbody>
+        </table>
+    </div>
+</body>
+
+
+<script>
+    function register() {
+        var n = document.getElementById("todoinput");
+        var a = document.getElementById("num");
+        var v = a.value();
+        console.log(n.value);
+        if (!n.value) {
+            alert("없음.");
+        }
+        else {
+            var list = document.getElementById("todolist");
+            list.innerHTML += "<tr id ='" + a + "'><td>" + n.value + "</td>" + '<td class="delete" onclick="register()">X</td></tr>'
+            id.value = a++
+        }
+    }
+</script>
+
+
+</html>
