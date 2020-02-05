@@ -15,9 +15,15 @@
 postman으로 get, post 관련 테스트
 
 
+vue.js
+- 예를 들어 to-do-frontend 새 프로젝트를 만들고 싶다면
+mkdir to-do-frontend
+cd to-do-frontend
+npm install -g vue-cli
 
-
-
+vue init pwa to-do-frontend
+y, y, n, n
+npm install로 모듈 설치해줌
 
 - package.json
  ``` {
